@@ -1,0 +1,408 @@
+﻿id,bulan,tahun,renaksi_id,target_waktu,status_kegiatan
+1,8,2021,1,Bulan Agustus (B08),4
+2,8,2021,2,Bulan Agustus (B08),4
+3,8,2021,3,Bulan Agustus (B08),4
+4,8,2021,4,Bulan Agustus (B08),4
+5,8,2021,5,Bulan Agustus (B08),4
+6,8,2021,6,Bulan Agustus (B08),4
+7,8,2021,7,Bulan Agustus (B08),4
+8,12,2024,8,Seluruh wilayah Indonesia (34 Provinsi) Bulan Desember (B12) 2024,4
+9,5,2021,9,Seluruh wilayah Indonesia (34 Provinsi) Bulan Mei (B05) 2021 dengan dukungan Peta Laut Indonesia,4
+10,10,2022,10,Seluruh wilayah Indonesia (34 Provinsi) Bulan Oktober (B10) 2022 dengan dukungan Peta Laut Indonesia,4
+11,8,2021,11,"Seluruh wilayah Indonesia yang belum tersedia CSRST Bulan Bulan Agustus (B08) 2021 Pemutakhiran CSRST wilayah Indonesia, setiap tahun",4
+12,10,2022,12,"Wilayah pulau terluar, Bulan Oktober (B10) 2022",4
+13,12,2023,13,Seluruh wilayah Indonesia (34 Provinsi)Bulan Desember (B12) 2023,4
+14,9,2024,14,Seluruh wilayah Indonesia (34 Provinsi) Bulan September (B09) 2024,4
+15,8,2021,15,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+16,9,2021,15,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+17,12,0,15,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+18,8,2021,16,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+19,9,2021,16,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+20,12,0,16,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+21,8,2021,17,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+22,9,2021,17,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+23,12,0,17,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+24,8,2021,18,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+25,9,2021,18,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+26,12,0,18,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+27,9,2021,19,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Bulan September (B09) 2021 tersedia peta kerja indikatif Batas Kewenangan Pengelolaan Sumber Daya Laut Provinsi,4
+28,12,2021,19,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember (B12) 2021,4
+29,8,2021,19,Pemutakhiran setiap Bulan Agustus (B08) 2021 dan Bulan Desember (B12),4
+30,12,2021,19,Pemutakhiran setiap Bulan Agustus (B08) 2021 dan Bulan Desember (B12),4
+31,8,2021,20,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+32,9,2021,20,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+33,3,0,20,"Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09) dan Desember (B12) setiap tahun",4
+34,8,0,20,"Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09) dan Desember (B12) setiap tahun",4
+35,9,0,20,"Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09) dan Desember (B12) setiap tahun",4
+36,12,0,20,"Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09) dan Desember (B12) setiap tahun",4
+37,8,2021,21,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+38,12,2021,21,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember (B12) 2021,4
+39,12,2021,21,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+40,8,2021,22,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+41,12,2021,22,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember (B12) 2021,4
+42,12,0,22,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+43,8,2021,23,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+44,9,2021,23,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+45,12,0,23,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+46,8,2021,24,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+47,12,2021,24,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember (B12) 2021,4
+48,12,0,24,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+49,8,2021,25,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+50,9,2021,25,"IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,",4
+51,12,0,25,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+52,8,2021,26,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+53,9,2021,26,"IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,",4
+54,12,0,26,Pemutakhiran Bulan Desember (B12) setiap tahun,4
+55,8,2021,27,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+56,9,2021,27,"IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,",4
+57,8,2021,27,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12),4
+58,12,2021,27,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12),4
+59,8,2021,28,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+60,9,2021,28,"IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,",4
+61,8,2021,28,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12),4
+62,12,2021,28,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12),4
+63,8,2021,29,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+64,9,2021,29,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+65,8,2021,29,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12) Setiap Tahun,4
+66,12,0,29,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12) Setiap Tahun,4
+67,8,2021,30,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+68,12,2021,30,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember (B12) 2021,4
+69,9,0,30,Pemutakhiran Bulan September (B09) Setiap Tahun,4
+70,8,2021,31,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+71,12,2021,31,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember (B12) 2021,4
+72,9,0,31,Pemutakhiran Bulan September (B09) Setiap Tahun,4
+73,8,2021,32,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+74,12,2021,32,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember (B12) 2021,4
+75,9,0,32,Pemutakhiran Bulan September (B09) Setiap Tahun,4
+76,8,2021,33,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+77,9,2021,33,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+78,8,2021,33,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+79,12,1,33,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+80,8,2021,34,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+81,9,2021,34,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+82,8,2021,34,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+83,12,1,34,Pemutakhiran Bulan Agustus (B08) 2021 dan Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+84,8,2021,35,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+85,9,2021,35,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+86,12,0,35,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+87,8,2021,36,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+88,9,2021,36,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+89,12,0,36,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+90,8,2021,37,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+91,9,2021,37,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+92,12,0,37,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+93,8,2021,38,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+94,9,2021,38,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+95,12,0,38,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+96,8,2021,39,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+97,9,2021,39,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+98,12,0,39,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+99,8,2021,40,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+100,12,2021,40,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+101,12,0,40,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+102,8,2021,41,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+103,12,2021,41,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+104,12,1,41,Pemutakhiran Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+105,8,2021,42,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+106,12,2021,42,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+107,12,1,42,Pemutakhiran Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+108,8,2021,43,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+109,12,2021,43,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+110,12,1,43,Pemutakhiran Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+111,8,2021,44,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+112,12,2021,44,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+113,12,1,44,Pemutakhiran Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+114,8,2021,45,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+115,12,2021,45,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+116,12,1,45,Pemutakhiran Bulan Desember (B12) setiap ada perubahan/penetapan baru,4
+117,8,2021,46,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+118,9,2021,46,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+119,12,0,46,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+120,8,2021,47,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+121,12,2021,47,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+122,12,0,47,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+123,8,2021,48,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+124,12,2021,48,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+125,12,0,48,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+126,8,2021,49,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+127,12,2021,49,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+128,8,2021,50,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+129,12,2021,50,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+130,12,0,50,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+131,0,2021,50,"Target Pemutakhiran cakupan wilayah tahun: 2021: Jawa Tengah, Jawa Timur, Jawa Barat, dan Banten",4
+132,0,2022,50,"Target Pemutakhiran cakupan wilayah tahun: 2022: Aceh, Sumatera Utara, dan Sumatera Barat",4
+133,0,2023,50,"Target Pemutakhiran cakupan wilayah tahun: 2023: Bengkulu, Jambi, dan Lampung",4
+134,0,2024,50,Target Pemutakhiran cakupan wilayah tahun: 2024: Sulawesi Tengah dan Gorontalo,4
+135,8,2021,51,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+136,9,2021,51,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+137,12,0,51,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+138,0,2021,51,"Target Pemutakhiran cakupan wilayah tahun: 2021: Jawa, Bali, Nusa Tenggara, Sumatera",4
+139,0,2022,51,Target Pemutakhiran cakupan wilayah tahun: 2022: Kalimantan,4
+140,0,2023,51,Target Pemutakhiran cakupan wilayah tahun: 2023: Sulawesi,4
+141,0,2024,51,Target Pemutakhiran cakupan wilayah tahun: 2024: Papua,4
+142,8,2021,52,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+143,12,2021,52,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+144,12,0,52,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+145,8,2021,53,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+146,12,2021,53,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+147,12,0,53,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+148,8,2021,54,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+149,12,2021,54,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+150,12,0,54,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+151,8,2021,55,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+152,12,2021,55,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+153,12,0,55,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+154,8,2021,56,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+155,12,2021,56,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+156,12,0,56,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+157,8,2021,57,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+158,12,2021,57,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+159,12,0,57,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+160,8,2021,58,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+161,12,2021,58,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+162,12,0,58,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+163,8,2021,59,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+164,9,2021,59,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+165,12,0,59,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+166,9,2021,60,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan September (B09) 2021,4
+167,12,2021,60,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+168,12,0,60,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+169,9,2022,61,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan September (B09) 2022,4
+170,12,2022,61,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2022,4
+171,12,0,61,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+172,12,2021,62,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Desember (B12) 2021,4
+173,3,2022,62,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Maret (B03) 2022,4
+174,12,0,62,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+175,8,2021,63,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+176,12,2021,63,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+177,12,0,63,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+178,9,2021,64,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan September (B09) 2021,4
+179,12,2021,64,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+180,12,0,64,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+181,8,2021,65,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+182,9,2021,65,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+183,12,0,65,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+184,8,2021,66,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+185,9,2021,66,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+186,12,0,66,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+187,0,2021,66,Target Pemutakhiran cakupan wilayah tahun: 2021: Kalimantan dan Sumatera,4
+188,0,2022,66,Target Pemutakhiran cakupan wilayah tahun: 2022: Papua,4
+189,8,2021,67,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+190,9,2021,67,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+191,12,0,67,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+192,0,2021,67,"Target Pemutakhiran cakupan wilayah tahun: 2021: Jawa, Sulawesi, dan Kalimantan",4
+193,0,2022,67,Target Pemutakhiran cakupan wilayah tahun: 2022: Sumatera,4
+194,8,2021,68,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+195,12,2021,68,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+196,12,0,68,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+197,8,2021,69,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+198,9,2021,69,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+199,12,0,69,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+200,8,2021,70,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+201,9,2021,70,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+202,12,0,70,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+203,8,2021,71,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+204,9,2021,71,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+205,12,0,71,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+206,8,2021,72,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+207,12,2021,72,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+208,12,0,72,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+209,8,2021,73,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+210,12,2021,73,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+211,12,0,73,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+212,8,2021,74,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+213,12,2021,74,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+214,12,0,74,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+215,8,2021,75,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+216,9,2021,75,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+217,12,0,75,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+218,8,2021,76,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+219,9,2021,76,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+220,12,0,76,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+221,8,2021,77,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+222,9,2021,77,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+223,12,0,77,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+224,8,2021,78,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+225,12,2021,78,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+226,12,0,78,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+227,8,2021,79,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+228,12,2021,79,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+229,12,0,79,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+230,8,2021,80,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+231,12,2021,80,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+232,12,0,80,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+233,8,2021,81,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+234,12,2021,81,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+235,12,0,81,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+236,8,2021,82,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+237,12,2021,82,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+238,12,0,82,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+239,8,2021,83,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+240,12,2021,83,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+241,12,0,83,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+242,8,2021,84,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+243,9,2021,84,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+244,12,0,84,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+245,8,2021,85,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+246,12,2021,85,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan Desember(B12) 2021,4
+247,12,0,85,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+248,8,2021,86,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Kompilasi Bulan Agustus (B08) 2021,4
+249,9,2021,86,IGT yang tersedia saat ini untuk seluruh wilayah Indonesia: Integrasi Bulan September (B09) 2021,4
+250,12,0,86,Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+251,8,0,87,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+252,12,0,87,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+253,8,0,88,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+254,12,0,88,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+255,8,0,89,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+256,12,0,89,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+257,12,0,90,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+258,12,0,91,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+259,8,0,92,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+260,12,0,92,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+261,8,2021,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Desa: 2021: 10 Provinsi,4
+262,12,2021,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Desa: 2021: 10 Provinsi,4
+263,8,2022,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Desa: 2022: 12 Provinsi,4
+264,12,2022,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Desa: 2022: 12 Provinsi,4
+265,8,2023,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Desa: 2023: 11 Provinsi,4
+266,12,2023,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Desa: 2023: 11 Provinsi,4
+267,8,2021,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Kelurahan: 2021: 5 Provinsi,4
+268,12,2021,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Kelurahan: 2021: 5 Provinsi,4
+269,8,2022,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Kelurahan: 2022: 13 Provinsi,4
+270,12,2022,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Kelurahan: 2022: 13 Provinsi,4
+271,8,2023,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Kelurahan: 2023: 15 Provinsi,4
+272,12,2022,93,Seluruh wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan  Bulan Desember (B12) setiap tahun: Kelurahan: 2023: 15 Provinsi,4
+273,12,0,94,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+274,12,0,95,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+275,3,0,96,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+276,8,0,96,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+277,9,0,96,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+278,12,0,96,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+279,3,0,97,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+280,8,0,97,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+281,9,0,97,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+282,12,0,97,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+283,8,1,98,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap ada perubahan/penetapan baru,4
+284,12,1,98,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap ada perubahan/penetapan baru,4
+285,8,1,99,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap ada perubahan/penetapan baru,4
+286,12,1,99,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap ada perubahan/penetapan baru,4
+287,12,0,100,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+288,12,2,101,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap ada kesepakatan/penetapan baru,4
+289,12,2,102,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap ada kesepakatan/penetapan baru,4
+290,3,0,103,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+291,8,0,103,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+292,9,0,103,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+293,12,0,103,"Seluruh Wilayah Indonesia Pemutakhiran Bulan Maret (B03), Bulan Agustus (B08), Bulan September (B09), dan Bulan Desember (B12) Setiap Tahun",4
+294,8,0,104,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+295,12,0,104,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+296,9,0,105,Seluruh Wilayah Indonesia Pemutakhiran Bulan September (B09) Setiap Tahun,4
+297,9,0,106,Seluruh Wilayah Indonesia Pemutakhiran Bulan September (B09) Setiap Tahun,4
+298,9,0,107,Seluruh Wilayah Indonesia Pemutakhiran Bulan September (B09) Setiap Tahun,4
+299,12,3,108,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember(B12) Setiap Tahun atau setiap ada penetapan baru,4
+300,8,1,109,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap ada perubahan/penetapan baru,4
+301,12,1,109,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap ada perubahan/penetapan baru,4
+302,12,0,110,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+303,12,0,111,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+304,12,0,112,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+305,0,1,113,Seluruh Wilayah Indonesia Pemutakhiran Setiap ada perubahan/penetapan baru,4
+306,8,0,114,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+307,12,0,114,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+308,8,0,115,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+309,12,0,115,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+310,12,0,116,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+311,12,4,117,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap 5 Tahun (setiap ada perubahan/penetapan baru),4
+312,12,0,118,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+313,0,1,119,Seluruh Wilayah Indonesia Pemutakhiran Setiap ada perubahan/penetapan baru,4
+314,12,0,120,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+315,0,1,121,Seluruh Wilayah Indonesia Pemutakhiran Setiap ada perubahan/penetapan baru,4
+316,8,0,122,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+317,12,0,122,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+318,8,0,123,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+319,12,0,123,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+320,12,0,124,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+321,12,0,125,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+322,12,0,126,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+323,12,0,127,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+324,12,0,128,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+325,12,0,129,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+326,12,0,130,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+327,12,5,131,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+328,12,5,132,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+329,12,0,133,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+330,12,0,134,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+331,12,0,135,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+332,12,0,136,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+333,12,0,137,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+334,8,0,138,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) Setiap Tahun,4
+335,8,0,139,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) Setiap Tahun,4
+336,8,0,140,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) Setiap Tahun,4
+337,12,0,141,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+338,12,0,142,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+339,12,0,143,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+340,12,6,144,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap ada penetapan baru,4
+341,12,6,145,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap ada penetapan baru,4
+342,12,0,146,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+343,8,0,147,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+344,12,0,147,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+345,9,2021,148,Seluruh Wilayah Indonesia Pemutakhiran Bulan September (B09) Setiap Tahun: 2021: 30 Kawasan TWA,4
+346,9,2022,148,Seluruh Wilayah Indonesia Pemutakhiran Bulan September (B09) Setiap Tahun: 2022: 50 Kawasan TWA,4
+347,9,2023,148,Seluruh Wilayah Indonesia Pemutakhiran Bulan September (B09) Setiap Tahun: 2023: 50 Kawasan TWA,4
+348,12,0,149,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+349,12,0,150,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+350,12,0,151,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+351,12,0,152,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+352,12,0,153,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+353,12,0,154,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+354,12,0,155,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+355,12,0,156,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+356,12,2021,157,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap tahun: 2021: 4 bendungan,4
+357,12,2022,157,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap tahun: 2022: 6 bendungan,4
+358,12,2023,157,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap tahun: 2023: 5 bendungan,4
+359,12,2024,157,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap tahun: 2024: 5 bendungan,4
+360,12,7,158,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap ada pembangunan baru,4
+361,12,8,159,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap 10 tahun,4
+362,12,0,160,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+363,12,0,161,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+364,12,0,162,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+365,8,0,163,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+366,12,0,163,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+367,8,0,164,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+368,12,0,164,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+369,12,0,165,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+370,12,0,166,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+371,12,0,167,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+372,12,0,168,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+373,12,0,169,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap Tahun,4
+374,12,9,170,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap ada sensus baru,4
+375,8,0,171,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+376,12,0,171,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+377,8,0,172,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+378,12,0,172,Seluruh Wilayah Indonesia Pemutakhiran Bulan Agustus (B08) dan Bulan Desember (B12) Setiap Tahun,4
+379,8,2021,173,Bulan Agustus (B08) 2021,4
+380,8,2021,174,Bulan Agustus (B08) 2021,4
+381,8,2021,175,Bulan Agustus (B08) 2021,4
+382,8,2021,176,Bulan Agustus (B08) 2021,4
+383,8,2021,177,Bulan Agustus (B08) 2021,4
+384,8,2021,178,Bulan Agustus (B08) 2021,4
+385,8,2021,179,Bulan Agustus (B08) 2021,4
+386,8,2021,180,Bulan Agustus (B08) 2021,4
+387,9,2021,181,Bulan September (B09) 2021,4
+388,12,2022,182,Bulan Desember (B12) 2022,4
+389,12,2021,183,Bulan Desember (B12) 2021,4
+390,12,2023,184,Bulan Desember (B12) 2023,4
+391,12,2024,185,Bulan Desember (B12) 2024,4
+392,12,2021,186,Bulan Desember (B12) 2021,4
+393,12,0,187,Seluruh Wilayah Indonesia Pemutakhiran Bulan Desember (B12) Setiap tahun,4
+394,12,2021,188,Seluruh Wilayah Indonesia Bulan Desember (B12) Setiap tahun: Tahun 2021: 10 Provinsi,4
+395,12,2022,188,Seluruh Wilayah Indonesia Bulan Desember (B12) Setiap tahun: Tahun 2022: 14 Provinsi,4
+396,12,2023,188,Seluruh Wilayah Indonesia Bulan Desember (B12) Setiap tahun: Tahun 2023: 10 Provinsi,4
+397,12,2021,189,Seluruh Wilayah Indonesia Bulan Desember (B12) Setiap tahun: Tahun 2021: 10 Provinsi,4
+398,12,2022,189,Seluruh Wilayah Indonesia Bulan Desember (B12) Setiap tahun: Tahun 2022: 14 Provinsi,4
+399,12,2023,189,Seluruh Wilayah Indonesia Bulan Desember (B12) Setiap tahun: Tahun 2023: 10 Provinsi,4
+400,8,2021,190,Bulan Agustus (B08) 2021,4
+401,12,2021,190,Bulan Desember (B12) 2021,4
+402,6,2022,190,Bulan Juni (B06) 2022,4
+403,12,2022,190,Bulan Desember (B12) 2022,4
+404,6,2023,190,Bulan Juni (B06) 2023,4
+405,12,2023,190,Bulan Desember (B12) 2023,4
+406,6,2024,190,Bulan Juni (B06) 2024,4
+407,12,2024,190,Bulan Desember (B12) 2024,4

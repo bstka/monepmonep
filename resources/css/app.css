@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.gridjs-input.gridjs-search-input {
+  width: 100% !important;
+}
+
+#selecttYear {
+  max-height: 42.3px !important;
+}
+
+.dashboard-max-height {
+  height: calc(100vh - 67px);
+}
