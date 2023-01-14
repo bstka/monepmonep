@@ -17,12 +17,17 @@ return new class extends Migration
             $table->id();
             $table->text("compilation_doc")->nullable();
             $table->text("integration_doc")->nullable();
-            $table->string("description");
-            $table->integer("compilation_target_count", false, true);
-            $table->integer("integration_target_count", false, true);
-            $table->integer("syncronization_target_count", false, true);
-            $table->integer("publication_target_count", false, true);
-            $table->bigInteger("program_target_id", false, true);
+            $table->string("description")->nullable();
+            $table->integer("compilation_target_count", false, true)->nullable();
+            $table->integer("integration_target_count", false, true)->nullable();
+            $table->integer("syncronization_target_count", false, true)->nullable();
+            $table->integer("publication_target_count", false, true)->nullable();
+            $table->integer("compilation_value", false, true)->nullable();
+            $table->integer("integration_value", false, true)->nullable();
+            $table->integer("syncronization_value", false, true)->nullable();
+            $table->integer("publication_value", false, true)->nullable();
+            $table->bigInteger("program_target_id", false, true)->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

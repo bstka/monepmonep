@@ -87,7 +87,7 @@
                                 </label>
                                 <div class="collapse-content flex flex-col gap-2 w-full text-left">
                                     @foreach($step->subSteps as $subStep)
-                                    <button class="w-full text-left btn btn-ghost" data-xo="{{ $subStep->id }}">
+                                    <button class="w-full text-left btn btn-ghost" data-xs="{{ $step->id }}" data-xss="{{ $subStep->id }}">
                                         <p class="w-full text-left">{{ $subStep->code}}. {{ $subStep->name}}</p>
                                     </button>
                                     @endforeach
@@ -96,7 +96,7 @@
                         </li>
                         @else
                         <li>
-                            <button data-xo="{{ $subStep->id }}" class="w-full text-left font-semibold">{{ $step->code }}. {{ $step->name }}</button>
+                            <button data-xs="{{ $step->id }}" data-xss="" class="w-full text-left font-semibold">{{ $step->code }}. {{ $step->name }}</button>
                         </li>
                         @endif
                         @endforeach

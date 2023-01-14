@@ -56,22 +56,22 @@
                     <p id="reportUnit">Satuan</p>
                 </div>
             </div>
-            <div class="flex flex-row gap-2 w-full">
+            <div class="flex-row gap-2 w-full hidden" id="targetCountContainer">
                 <div class="flex flex-col gap-2 w-full">
                     <h3 class="font-bold">Target Kompilasi</h3>
-                    <input name="compilation_target_count" type="text" placeholder="Realisasi target Kompilasi" class="input input-bordered w-full max-w-xs" />
+                    <input name="compilation_target_count" type="number" value="0" placeholder="Realisasi target Kompilasi" class="input input-bordered w-full max-w-xs" />
                 </div>
                 <div class="flex flex-col gap-2 w-full">
                     <h3 class="font-bold">Target Integrasi</h3>
-                    <input name="integration_target_count" type="text" placeholder="Realisasi target Integrasi" class="input input-bordered w-full max-w-xs" />
+                    <input name="integration_target_count" type="number" value="0" placeholder="Realisasi target Integrasi" class="input input-bordered w-full max-w-xs" />
                 </div>
                 <div class="flex flex-col gap-2 w-full">
                     <h3 class="font-bold">Target Sinkronisasi</h3>
-                    <input name="syncronization_target_count" type="text" placeholder="Realisasi target Sinkronisasi" class="input input-bordered w-full max-w-xs" />
+                    <input name="syncronization_target_count" type="number" value="0" placeholder="Realisasi target Sinkronisasi" class="input input-bordered w-full max-w-xs" />
                 </div>
                 <div class="flex flex-col gap-2 w-full">
                     <h3 class="font-bold">Target Publikasi</h3>
-                    <input name="publication_target_count" type="text" placeholder="Realisasi target Publikasi" class="input input-bordered w-full max-w-xs" />
+                    <input name="publication_target_count" type="number" value="0" placeholder="Realisasi target Publikasi" class="input input-bordered w-full max-w-xs" />
                 </div>
             </div>
             <div class="flex flex-col gap-2 w-full">
@@ -99,9 +99,9 @@
             </div>
             <div class="flex flex-col gap-2 w-full">
                 <h3 class="font-bold">Keterangan / Kendala</h3>
-                <textarea name="description" class="textarea textarea-bordered" placeholder="Isi keterangan"></textarea>
+                <textarea name="description" id="reportDesc" class="textarea textarea-bordered" placeholder="Isi keterangan"></textarea>
             </div>
-            <div class="flex flex-col gap-2 w-full">
+            <div class="flex-col gap-2 w-full hidden" id="compilationFileContainer">
                 <h3 class="font-bold">Unggah Dokumen Kompilasi (Berita Acara atau Dokumen Pendukung Lainnya)</h3>
                 <div class="form-control w-full">
                     <input name="compilation_doc" type="file" class="file-input file-input-bordered file-input-primary w-full" />
@@ -109,8 +109,9 @@
                         <span class="label-text-alt">Maksimal ukuran unggah berkas: 40MB</span>
                     </label>
                 </div>
+                <div class="w-full flex flex-row gap-2 items-center justify-start flex-wrap" id="compilationFile"></div>
             </div>
-            <div class="flex flex-col gap-2 w-full">
+            <div class="flex-col gap-2 w-full hidden" id="integrationFileContainer">
                 <h3 class="font-bold">Unggah Dokumen Integrasi (Berita Acara atau Dokumen Pendukung Lainnya)</h3>
                 <div class="form-control w-full">
                     <input name="integration_doc" type="file" class="file-input file-input-bordered file-input-primary w-full" />
@@ -118,6 +119,7 @@
                         <span class="label-text-alt">Maksimal ukuran unggah berkas: 40MB</span>
                     </label>
                 </div>
+                <div class="w-full flex flex-row gap-2 items-center justify-start flex-wrap" id="integrationFile"></div>
             </div>
             <div class="modal-action w-full flex-row">
                 <label for="my-modal-5" class="btn">Batal</label>

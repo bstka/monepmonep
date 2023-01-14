@@ -1,15 +1,14 @@
 ﻿
-1,A.0,Semua
-2,B.0,Semua
-3,C.0,Semua
-4,D.0,Semua
-5,E.0,Semua
-6,F.0,Semua
-7,G.0,Semua
-4,D.0,Semua
-4,D.1,Perwujudan IGT Status
-4,D.2,Perwujudan IGT Perencanaan Ruang
-4,D.3,Perwujudan IGT Potensi
-5,E.1,Pemuktahiran IGT Status
-5,E.2,PEMUTAKHIRAN IGT PERENCANAAN RUANG
-5,E.3,Pemutakhiran IGT Potensi
+1,1,A.0,Semua
+2,2,B.0,Semua
+3,3,C.0,Semua
+4,4,D.0,Semua
+5,5,E.0,Semua
+6,6,F.0,Semua
+7,7,G.0,Semua
+8,4,D.1,Perwujudan IGT Status
+9,4,D.2,Perwujudan IGT Perencanaan Ruang
+10,4,D.3,Perwujudan IGT Potensi
+11,5,E.1,Pemuktahiran IGT Status
+12,5,E.2,PEMUTAKHIRAN IGT PERENCANAAN RUANG
+13,5,E.3,Pemutakhiran IGT Potensi

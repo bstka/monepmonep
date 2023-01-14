@@ -33,7 +33,10 @@ Route::middleware(['auth'])->prefix('api')->group(function () {
     // ! Programs
     Route::prefix('programs')->group(function () {
         Route::get('/', [ProgramController::class, 'getAllProgramsByUserInstance']);
+        Route::get('/year/{year}/{stepId}/{subStepId}', [ProgramController::class, 'getAllProgramsByUserInstanceAndYear'])->whereNumber(['year', 'stepId', 'subStepId']);
         Route::get('/target/{programId}/{targetId}', [ProgramController::class, 'getTargetById'])->whereNumber(['programId', 'targetId']);
         Route::post('/target/{programId}/{targetId}', [ProgramTargetController::class, 'insertTargetReport'])->whereNumber(['programId', 'targetId']);
+        Route::put('/target/{programId}/{targetId}/{fileId}', [ProgramTargetController::class, 'updateTargetReport'])->whereNumber(['programId', 'targetId', 'fileId']);
+        Route::delete('/target/{programId}/{targetId}/{fileId}', [ProgramTargetController::class, 'deleteTargetReport'])->whereNumber(['programId', 'targetId', 'fileId']);
     });
 });

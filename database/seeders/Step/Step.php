@@ -17,7 +17,7 @@ class Step extends Seeder
     {
         $files = fopen(base_path('database/seeders/Step/tahapan.csv'), "r");
 
-        $firstLine = false;
+        $firstLine = true;
 
         while (($data = fgetcsv($files, 520, ",")) !== false) {
             if (!$firstLine) {

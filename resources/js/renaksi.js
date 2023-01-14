@@ -1,9 +1,16 @@
 import { Grid, html, h } from "gridjs";
 import "gridjs/dist/theme/mermaid.css";
-import { getPrepareTarget, postTargetReport } from "./request/report";
+import { deleteTargetReport, getPrepareTarget, postTargetReport, updateTargetReport } from "./request/report";
+
+const has2Files = ['A', 'B', 'C', 'F', 'G'];
 
 const STATE = {
-    isEdit: false
+    isEdit: false,
+    currentPage: 'A',
+    replacedHandler: false,
+    selectedYear: new Date().getFullYear(),
+    step: 5,
+    subStep: 1
 };
 
 const mainTable = new Grid({
@@ -25,6 +32,7 @@ const mainTable = new Grid({
                         const month = data.month < 10 ? ("B0" + data.month) : ("B" + data.month);
                         const year = yearParser(data.year);
                         const countReport = data.files.length;
+                        const lastFile = data.files[countReport - 1];
 
                         return [
                             h('div', {
@@ -56,16 +64,17 @@ const mainTable = new Grid({
                                     }),
                                     countReport > 0 && h('button', {
                                         className: 'btn btn-xs btn-error',
-                                        children: 'Hapus'
+                                        children: 'Hapus',
+                                        onClick: () => deleteReport({ programId, targetId: data.id, file: lastFile })
                                     }),
-                                    h('button', {
+                                    countReport > 0 && h('button', {
                                         className: 'btn btn-xs btn-warning',
                                         children: 'Lihat',
                                         onClick: () => {
 
                                         }
                                     }),
-                                    h('button', {
+                                    countReport > 0 && h('button', {
                                         className: 'btn btn-xs btn-info',
                                         children: 'Ubah',
                                         onClick: () => {
@@ -103,7 +112,7 @@ const mainTable = new Grid({
         }
     ],
     server: {
-        url: '/api/programs',
+        url: `/api/programs/year/${STATE.selectedYear}/1/1`,
         handle: async (res) => {
             const raw = await res.json();
             return raw.data;
@@ -136,7 +145,6 @@ const mainTable = new Grid({
         }
     }
 });
-
 
 const modalLabel = document.getElementById('toggle-modal');
 
@@ -174,6 +182,22 @@ function yearParser(year) {
     }
 }
 
+async function deleteReport({ programId, targetId, file }) {
+    if (confirm('Apakah anda yakin untuk menghapus laporan ini?')) {
+        try {
+            const { error } = await deleteTargetReport({ programId, targetId, fileId: file.id }, {
+                _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            });
+
+            if (!error) {
+                mainTable.forceRender();
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
 async function updateReportModal({ programId, targetId }) {
     const { data: { data }, error } = await getPrepareTarget({ programId, targetId });
 
@@ -189,60 +213,111 @@ async function updateReportModal({ programId, targetId }) {
     const reportUnit = document.getElementById('reportUnit');
     const reportId = document.getElementById('reportIdx');
     const programIdx = document.getElementById('programIdx');
+    const reportDesc = document.getElementById('reportDesc');
     const provinceSelector = document.getElementById('provinceChecks');
     const compilation_target_count = document.querySelector('input[name="compilation_target_count"]');
     const integration_target_count = document.querySelector('input[name="integration_target_count"]');
     const syncronization_target_count = document.querySelector('input[name="syncronization_target_count"]');
     const publication_target_count = document.querySelector('input[name="publication_target_count"]');
     const areaOfRealization = document.querySelector('input[value="partial"]');
+    const integrationFile = document.getElementById('integrationFile');
+    const compilationFile = document.getElementById('compilationFile');
     const provinceCheckBoxes = document.querySelectorAll('input[class="checkbox checkbox-sm checkbox-primary chk-province"]');
+    const integrationFileContainer = document.getElementById('integrationFileContainer');
+    const compilationFileContainer = document.getElementById('compilationFileContainer');
+    const targetCountContainer = document.getElementById('targetCountContainer');
 
     const month = data.target.month < 10 ? ("B0" + data.target.month) : ("B" + data.target.month);
 
+    [integrationFile, compilationFile].forEach((element) => { element.innerHTML = ''; });
+
     reportForm.reset();
+    reportDesc.textContent = '';
 
     provinceSelector.classList.remove('grid');
     provinceSelector.classList.add('hidden');
 
     if (!error) {
-        reportTitle.innerText = data.program.name;
-        reportOutput.innerText = data.program.output;
-        reportInstanceResponsible.innerText = data.program.instance.name;
-        reportTarget.innerText = data.target.name;
-        reportMonth.innerText = month;
-        reportYear.innerText = yearParser(data.target.year);
-        reportQuantitiveTarget.innerText = data.program.quantitive;
-        reportUnit.innerText = data.program.unit.name;
+        reportTitle.textContent = data.program.name;
+        reportOutput.textContent = data.program.output;
+        reportInstanceResponsible.textContent = data.program.instance.name;
+        reportTarget.textContent = data.target.name;
+        reportMonth.textContent = month;
+        reportYear.textContent = yearParser(data.target.year);
+        reportQuantitiveTarget.textContent = data.program.quantitive;
+        reportUnit.textContent = data.program.unit.name;
         reportId.setAttribute('value', data.target.id);
         programIdx.setAttribute('value', data.program.id);
+        areaOfRealization.removeAttribute('checked');
 
         provinceCheckBoxes.forEach((element) => element.removeAttribute('checked'));
+
+        if (has2Files.indexOf(STATE.currentPage) > -1) {
+            compilationFileContainer.classList.remove('hidden');
+            compilationFileContainer.classList.add('flex');
+        } else {
+            targetCountContainer.classList.remove('hidden');
+            targetCountContainer.classList.add('flex');
+
+            [integrationFileContainer, compilationFileContainer].forEach((element) => {
+                element.classList.remove('hidden');
+                element.classList.add('flex');
+            });
+        }
+
 
         if (STATE.isEdit) {
             const lastIndex = data.target.files.length - 1;
             const file = data.target.files[lastIndex];
+
+            function boundPostReport(events) {
+                postReport(events, file.id);
+            }
+
+            if (!STATE.replacedHandler) {
+                console.log("deleted");
+                reportForm.removeEventListener('submit', postReport);
+                reportForm.addEventListener('submit', boundPostReport);
+                STATE.replacedHandler = true;
+            }
+
+            [[integrationFile, file.integration_doc], [compilationFile, file.compilation_doc]].forEach((element) => {
+                if (element[1] !== null) {
+                    const badgeElement = document.createElement('button');
+                    badgeElement.textContent = element[1];
+                    badgeElement.classList.add('btn', 'btn-xs', 'font-semibold', 'w-fit');
+                    badgeElement.setAttribute('type', 'button');
+                    badgeElement.addEventListener('click', () => console.log("click"));
+
+                    element[0].appendChild(badgeElement);
+                }
+            });
+
             compilation_target_count.setAttribute('value', file.compilation_target_count);
             integration_target_count.setAttribute('value', file.integration_target_count);
             syncronization_target_count.setAttribute('value', file.syncronization_target_count);
             publication_target_count.setAttribute('value', file.publication_target_count);
-            areaOfRealization.setAttribute('checked', 'checked');
+            reportDesc.textContent = file.description;
 
-            provinceCheckBoxes.forEach((element) => {
-                file.provinces.forEach(({ id, ...v }) => {
-                    if (element.value === String(id)) {
-                        console.log(v.name);
-                        element.setAttribute('checked', 'checked');
-                    } else {
-                    }
-                });
+            const provinceIds = file.provinces.map((data) => data.id);
+            const checkboxArray = Array.from(provinceCheckBoxes).filter((element) => {
+                return provinceIds.indexOf(Number(element.value)) > -1 ? true : false;
             });
+
+            checkboxArray.forEach((element) => {
+                element.setAttribute('checked', 'checked');
+            });
+
+            if (provinceIds.length > 0) {
+                areaOfRealization.setAttribute('checked', 'checked');
+            }
 
             provinceSelector.classList.remove('hidden');
             provinceSelector.classList.add('grid');
+        } else {
+            // STATE.isEdit = false;
         }
 
-
-        STATE.isEdit = false;
         modalLabel.click();
     } else {
         console.log(error);
@@ -250,7 +325,7 @@ async function updateReportModal({ programId, targetId }) {
 }
 
 // ! Report Form Event Handler!
-async function postReport(events) {
+async function postReport(events, fileId = 0) {
     events.preventDefault();
     const form = new FormData(events.target);
     const provinceCodes = [];
@@ -285,8 +360,13 @@ async function postReport(events) {
                 mainTable.forceRender();
                 modalLabel.click();
             }
+        } else {
+            const { data, error } = await updateTargetReport({ programId: prePostData.programId, targetId: prePostData.reportId, fileId: fileId }, parseToFormData);
+            if (!error) {
+                mainTable.forceRender();
+                modalLabel.click();
+            }
         }
-
     } catch (error) {
         console.log(error);
     }
@@ -300,26 +380,64 @@ const years = [
     2021, 2022, 2023, 2024, 2025, 2026
 ];
 
-const selectElements = document.createElement('select');
-selectElements.classList.add('select', 'w-full', 'outline-none', 'max-w-[150px]', 'bg-primary', 'text-white', 'text-xl', 'text-center');
-selectElements.setAttribute('id', 'selecttYear');
+mainTable.on('load', () => {
+    const selectElements = document.createElement('select');
+    selectElements.classList.add('select', 'w-full', 'outline-none', 'max-w-[150px]', 'bg-primary', 'text-white', 'text-xl', 'text-center');
+    selectElements.setAttribute('id', 'selecttYear');
+    selectElements.addEventListener('change', events => {
+        const year = events.target.value;
+        STATE.selectedYear = year;
 
-document.getElementsByClassName('gridjs-search')[0].appendChild(selectElements);
+        const { url, ...rest } = mainTable.config.server;
 
-const currentYear = new Date().getFullYear();
+        mainTable.updateConfig({
+            server: {
+                url: `/api/programs/year/${year}/${STATE.step}/${STATE.subStep}`,
+                ...rest
+            }
+        });
 
-for (const year of years) {
-    const optionsElements = document.createElement('option');
-    optionsElements.value = year;
-    optionsElements.innerText = year;
+        mainTable.forceRender();
+    });
 
-    if (year === currentYear) optionsElements.setAttribute('selected', 'selected');
+    document.getElementsByClassName('gridjs-search')[0].appendChild(selectElements);
 
-    selectElements.appendChild(optionsElements);
+    for (const year of years) {
+        const optionsElements = document.createElement('option');
+        optionsElements.value = year;
+        optionsElements.textContent = year;
+
+        if (year == STATE.selectedYear) optionsElements.setAttribute('selected', 'selected');
+
+        selectElements.appendChild(optionsElements);
+    }
+});
+
+// ! Sidebar Button Event Listener!
+const sidebarButton = document.querySelectorAll('button[data-xss]');
+
+async function sideBarButtonHandler(buttonElement) {
+    const step = buttonElement.dataset.xs;
+    const subStep = buttonElement.dataset.xss;
+
+    STATE.step = step;
+    STATE.subStep = subStep;
+
+    const { url, ...rest } = mainTable.config.server;
+
+    mainTable.updateConfig({
+        server: {
+            url: `/api/programs/year/${STATE.selectedYear}/${step}/${subStep}`,
+            ...rest
+        }
+    });
+
+    mainTable.forceRender();
 }
 
-// ! Report Form Add Events!
-document.getElementById('reportForm').addEventListener('submit', postReport);
+sidebarButton.forEach((element) => {
+    element.addEventListener('click', events => sideBarButtonHandler(element));
+});
 
 // ! Partial Province Selector!
 const provinceSelectorRadio = document.querySelectorAll('input.radio.radio-partial');

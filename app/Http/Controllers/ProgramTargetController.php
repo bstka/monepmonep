@@ -17,13 +17,13 @@ class ProgramTargetController extends Controller
     {
         // dd($request->provinces);
         $request->validate([
-            "compilation_doc" => ['file'],
+            "compilation_doc" => ['file', 'required'],
             "integration_doc" => ['file'],
             "description" => ['required', 'string'],
-            "compilation_target_count" => ['required', 'numeric'],
-            "integration_target_count" => ['required', 'numeric'],
-            "syncronization_target_count" => ['required', 'numeric'],
-            "publication_target_count" => ['required', 'numeric'],
+            "compilation_target_count" => ['numeric'],
+            "integration_target_count" => ['numeric'],
+            "syncronization_target_count" => ['numeric'],
+            "publication_target_count" => ['numeric'],
             "provinces" => ['array'],
             "provinces.*" => ['numeric'],
         ]);
@@ -32,8 +32,16 @@ class ProgramTargetController extends Controller
         $target = $program->targets()->where('id', $targetId)->first();
         $storage = Storage::disk('local');
 
-        $compilation_doc = '';
-        $integration_doc = '';
+        // ! Target Valueization / Grading!
+        $targetQuantitive = $program->quantitive;
+
+        $compilationValue = (int) (intval($request->compilation_target_count) / intval($targetQuantitive)) * 100;
+        $integrationValue = (int) (intval($request->integration_target_count) / intval($targetQuantitive)) * 100;
+        $publicationValue = (int) (intval($request->publication_target_count) / intval($targetQuantitive)) * 100;
+        $syncronizationValue = (int) (intval($request->syncronization_target_count) / intval($targetQuantitive)) * 100;
+
+        $compilation_doc = null;
+        $integration_doc = null;
 
         if ($request->file('compilation_doc')) {
             $file = $request->file('compilation_doc');
@@ -59,8 +67,12 @@ class ProgramTargetController extends Controller
             "description" => $request->description,
             "compilation_target_count" => $request->compilation_target_count,
             "integration_target_count" => $request->integration_target_count,
-            "syncronization_target_count" => $request->syncronization_target_count,
             "publication_target_count" => $request->publication_target_count,
+            "syncronization_target_count" => $request->syncronization_target_count,
+            "compilation_value" => $compilationValue,
+            "integration_value" => $integrationValue,
+            "publication_value" => $publicationValue,
+            "syncronization_value" => $syncronizationValue,
             "program_target_id" => $target->id
         ]);
 
@@ -72,12 +84,92 @@ class ProgramTargetController extends Controller
                     "province_id" => $request->provinces[$i],
                     "target_file_id" => $targetFiles->id
                 ]);
-                error_log($targetProvince);
             }
         }
 
 
         if ($targetFiles && $targetProvince) {
+            return response(["status" => 200, "message" => "Success!"], 200);
+        } else {
+            return response(["status" => 500, "message" => "Error!"], 500);
+        }
+    }
+
+    public function deleteTargetReport($programId, $targetId, $fileId)
+    {
+        $data = Auth::user()->instance->programs()->where('id', $programId)->first();
+        $target = $data->targets()->where('id', $targetId)->first();
+        $file = $target->files()->where('id', $fileId)->delete();
+
+        if ($file) {
+            return response(["status" => 200, "message" => "Success!"], 200);
+        } else {
+            return response(["status" => 500, "message" => "Error!"], 500);
+        }
+    }
+
+    public function updateTargetReport(Request $request, $programId, $targetId, $fileId)
+    {
+        $request->validate([
+            "compilation_doc" => ['file'],
+            "integration_doc" => ['file'],
+            "description" => ['string'],
+            "compilation_target_count" => ['numeric'],
+            "integration_target_count" => ['numeric'],
+            "syncronization_target_count" => ['numeric'],
+            "publication_target_count" => ['numeric'],
+            "provinces" => ['array'],
+            "provinces.*" => ['numeric'],
+        ]);
+
+        $data = Auth::user()->instance->programs()->where('id', $programId)->first();
+        $target = $data->targets()->where('id', $targetId)->first();
+        $storage = Storage::disk('local');
+
+        $preInsertData = [
+            "description" => $request->description,
+            "compilation_target_count" => $request->compilation_target_count,
+            "integration_target_count" => $request->integration_target_count,
+            "publication_target_count" => $request->publication_target_count,
+            "syncronization_target_count" => $request->syncronization_target_count,
+        ];
+
+        if ($request->file('compilation_doc')) {
+            $file = $request->file('compilation_doc');
+
+            $extension = pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION);
+            $compilation_doc = (string) Str::uuid() . '.' . $extension;
+            $preInsertData['compilation_doc'] = $compilation_doc;
+
+            $storage->put($compilation_doc, $file);
+        }
+
+        if ($request->file('integration_doc')) {
+            $file = $request->file('integration_doc');
+
+            $extension = pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION);
+            $integration_doc = (string) Str::uuid() . '.' . $extension;
+            $preInsertData['integration_doc'] = $integration_doc;
+
+            $storage->put($integration_doc, $file);
+        }
+
+        $file = $target->files()->where('id', $fileId)->first();
+
+        if ($request->provinces) {
+            if (count($file->provinces) > 0) ProgramTargetFileProvinces::where("target_file_id", $fileId)->delete();
+
+            for ($i = 0; $i < count($request->provinces); $i++) {
+                $targetProvince = ProgramTargetFileProvinces::create([
+                    "province_id" => $request->provinces[$i],
+                    "target_file_id" => $fileId
+                ]);
+            }
+        }
+
+        $fileUpdate = $file->update($preInsertData);
+
+        if ($fileUpdate > 0) {
             return response(["status" => 200, "message" => "Success!"], 200);
         } else {
             return response(["status" => 500, "message" => "Error!"], 500);

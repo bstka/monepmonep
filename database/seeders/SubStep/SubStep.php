@@ -22,9 +22,10 @@ class SubStep extends Seeder
         while (($data = fgetcsv($files, 520, ",")) !== false) {
             if (!$firstLine) {
                 $cast = [
-                    "name" => $data['2'],
-                    "code" => $data['1'],
-                    "step_id" => (int)$data['0'],
+                    "name" => $data['3'],
+                    "code" => $data['2'],
+                    "step_id" => (int)$data['1'],
+                    "id" => (int)$data['0'],
                 ];
                 ModelsSubStep::create($cast);
             }
