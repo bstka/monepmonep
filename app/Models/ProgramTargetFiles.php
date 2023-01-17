@@ -24,8 +24,20 @@ class ProgramTargetFiles extends Model
         'syncronization_value',
         'publication_value',
         'program_target_id',
-        'description'
+        'description',
+        'reported_by_user_id',
+        'validated_by_setkab_id',
+        'validated_by_satgas_id',
+        'validated_by_setkab_timestamp',
+        'validated_by_satgas_timestamp',
+        'validate_note_setkab',
+        'validate_note_satgas'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'reported_by_user_id');
+    }
 
     public function target()
     {

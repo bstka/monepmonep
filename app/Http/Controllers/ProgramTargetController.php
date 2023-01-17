@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ProgramTargetFileProvinces;
 use App\Models\ProgramTargetFiles;
 use App\Models\ProgramTargetProvince;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -73,7 +74,8 @@ class ProgramTargetController extends Controller
             "integration_value" => $integrationValue,
             "publication_value" => $publicationValue,
             "syncronization_value" => $syncronizationValue,
-            "program_target_id" => $target->id
+            "program_target_id" => $target->id,
+            "reported_by_user_id" => Auth::user()->id,
         ]);
 
         $targetProvince = 0;
@@ -170,6 +172,68 @@ class ProgramTargetController extends Controller
         $fileUpdate = $file->update($preInsertData);
 
         if ($fileUpdate > 0) {
+            return response(["status" => 200, "message" => "Success!"], 200);
+        } else {
+            return response(["status" => 500, "message" => "Error!"], 500);
+        }
+    }
+
+    public function validateTargetReport(Request $request, $fileId)
+    {
+        $request->validate([
+            "verificationNote" => ['string']
+        ]);
+
+        $data = null;
+
+        if (Auth::user()->hasRole(['setkab'])) {
+            $data = ProgramTargetFiles::where('id', $fileId)->update([
+                "validated_by_setkab_id" => Auth::user()->id,
+                "validate_note_setkab" => $request->verificationNote,
+                "validated_by_setkab_timestamp" => Carbon::now('Asia/Jakarta')
+            ]);
+        } else if (Auth::user()->hasRole(['satgas'])) {
+            $data = ProgramTargetFiles::where('id', $fileId)->update([
+                "validated_by_satgas_id" => Auth::user()->id,
+                "validate_note_satgas" => $request->verificationNote,
+                "validated_by_satgas_timestamp" => Carbon::now('Asia/Jakarta')
+            ]);
+        } else {
+            return response(["status" => 403, "message" => "Unauthorized"], 403);
+        }
+
+        if ($data !== null) {
+            return response(["status" => 200, "message" => "Success!"], 200);
+        } else {
+            return response(["status" => 500, "message" => "Error!"], 500);
+        }
+    }
+
+    public function unvalidateTargetReport(Request $request, $fileId)
+    {
+        $request->validate([
+            "verificationNote" => ['string']
+        ]);
+
+        $data = null;
+
+        if (Auth::user()->hasRole(['setkab'])) {
+            $data = ProgramTargetFiles::where('id', $fileId)->update([
+                "validated_by_setkab_id" => null,
+                "validate_note_setkab" => null,
+                "validated_by_setkab_timestamp" => null
+            ]);
+        } else if (Auth::user()->hasRole(['satgas'])) {
+            $data = ProgramTargetFiles::where('id', $fileId)->update([
+                "validated_by_satgas_id" => null,
+                "validate_note_satgas" => null,
+                "validated_by_satgas_timestamp" => null
+            ]);
+        } else {
+            return response(["status" => 403, "message" => "Unauthorized"], 403);
+        }
+
+        if ($data !== null) {
             return response(["status" => 200, "message" => "Success!"], 200);
         } else {
             return response(["status" => 500, "message" => "Error!"], 500);

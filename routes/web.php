@@ -38,5 +38,9 @@ Route::middleware(['auth'])->prefix('api')->group(function () {
         Route::post('/target/{programId}/{targetId}', [ProgramTargetController::class, 'insertTargetReport'])->whereNumber(['programId', 'targetId']);
         Route::put('/target/{programId}/{targetId}/{fileId}', [ProgramTargetController::class, 'updateTargetReport'])->whereNumber(['programId', 'targetId', 'fileId']);
         Route::delete('/target/{programId}/{targetId}/{fileId}', [ProgramTargetController::class, 'deleteTargetReport'])->whereNumber(['programId', 'targetId', 'fileId']);
+
+        //! Verifications
+        Route::post('/target/validate/{fileId}', [ProgramTargetController::class, 'validateTargetReport'])->middleware(['role:satgas|setkab'])->whereNumber(['fileId']);
+        Route::delete('/target/validate/{fileId}', [ProgramTargetController::class, 'unvalidateTargetReport'])->middleware(['role:satgas|setkab'])->whereNumber(['fileId']);
     });
 });

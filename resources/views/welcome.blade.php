@@ -108,12 +108,12 @@
                 <img src="{{ asset('/instance_logos/onemap.png') }}" />
             </div>
             <h3 class="font-bold text-xl text-center">Masuk</h3>
-            <form id="logsForm" class="py-4 flex flex-col w-full">
+            <form id="logsForm" class="py-4 flex flex-col w-full" autocomplete="on">
                 <div class=" form-control w-full">
                     <label class="label">
                         <span class="label-text">Email / Surel</span>
                     </label>
-                    <input name="email" id="email" type="email" placeholder="nama@domain.ltd" class="input input-bordered w-full" />
+                    <input name="email" id="email" type="email" placeholder="nama@domain.ltd" class="input input-bordered w-full" autofocus />
                     <label class="label">
                         <span class="label-text-alt text-error" id="emailHint"></span>
                     </label>

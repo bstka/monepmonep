@@ -1,6 +1,6 @@
 import { Grid, html, h } from "gridjs";
 import "gridjs/dist/theme/mermaid.css";
-import { deleteTargetReport, getPrepareTarget, postTargetReport, updateTargetReport } from "./request/report";
+import { deleteTargetReport, getPrepareTarget, postTargetReport, unvalidateReport, updateTargetReport, validateReport } from "./request/report";
 
 const has2Files = ['A', 'B', 'C', 'F', 'G'];
 
@@ -63,31 +63,26 @@ const mainTable = new Grid({
                                         children: countReport > 0 ? `Laporan Ke-${countReport}` : ''
                                     }),
                                     countReport > 0 && h('button', {
-                                        className: 'btn btn-xs btn-error',
-                                        children: 'Hapus',
-                                        onClick: () => deleteReport({ programId, targetId: data.id, file: lastFile })
-                                    }),
-                                    countReport > 0 && h('button', {
                                         className: 'btn btn-xs btn-warning',
                                         children: 'Lihat',
                                         onClick: () => {
 
                                         }
                                     }),
-                                    countReport > 0 && h('button', {
-                                        className: 'btn btn-xs btn-info',
-                                        children: 'Ubah',
+                                    (countReport > 0 && lastFile.validated_by_setkab_id === null) && h('button', {
+                                        className: 'btn btn-xs btn-success',
+                                        children: 'Verifikasi',
                                         onClick: () => {
                                             STATE.isEdit = true;
-                                            updateReportModal(({ programId, targetId: data.id }));
+                                            updateReportModal({ programId, targetId: data.id });
                                         }
                                     }),
-                                    h('button', {
-                                        className: 'btn btn-xs btn-primary',
-                                        children: 'Laporkan',
+                                    (countReport > 0 && lastFile.validated_by_setkab_id !== null) && h('button', {
+                                        className: 'btn btn-xs btn-error',
+                                        children: 'Batalkan Verifikasi',
                                         onClick: () => {
-                                            STATE.isEdit = false;
-                                            updateReportModal({ programId, targetId: data.id });
+                                            STATE.isEdit = true;
+                                            deleteReport({ fileId: lastFile.id });
                                         }
                                     }),
                                 ]
@@ -182,12 +177,13 @@ function yearParser(year) {
     }
 }
 
-async function deleteReport({ programId, targetId, file }) {
-    if (confirm('Apakah anda yakin untuk menghapus laporan ini?')) {
+async function deleteReport({ fileId }) {
+    if (confirm('Apakah anda yakin untuk membatalkan verifikasi laporan ini?')) {
         try {
-            const { error } = await deleteTargetReport({ programId, targetId, fileId: file.id }, {
-                _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-            });
+            const formData = new FormData();
+            formData.append('_token', document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
+
+            const { error } = await unvalidateReport({ fileId }, formData);
 
             if (!error) {
                 mainTable.forceRender();
@@ -229,10 +225,11 @@ async function updateReportModal({ programId, targetId }) {
 
     const month = data.target.month < 10 ? ("B0" + data.target.month) : ("B" + data.target.month);
 
-    [integrationFile, compilationFile].forEach((element) => { element.innerHTML = ''; });
-
     reportForm.reset();
     reportDesc.textContent = '';
+
+    integrationFile.innerHTML = '';
+    compilationFile.innerHTML = '';
 
     provinceSelector.classList.remove('grid');
     provinceSelector.classList.add('hidden');
@@ -315,8 +312,7 @@ async function updateReportModal({ programId, targetId }) {
             provinceSelector.classList.remove('hidden');
             provinceSelector.classList.add('grid');
         } else {
-            reportForm.addEventListener('submit', postReport);
-            STATE.isEdit = false;
+            // STATE.isEdit = false;
         }
 
         modalLabel.click();
@@ -354,19 +350,13 @@ async function postReport(events, fileId = 0) {
         parseToFormData.append('provinces[]', v);
     });
 
+    console.log(parseToFormData);
+
     try {
-        if (!STATE.isEdit) {
-            const { data, error } = await postTargetReport(parseToFormData, prePostData.programId, prePostData.reportId);
-            if (!error) {
-                mainTable.forceRender();
-                modalLabel.click();
-            }
-        } else {
-            const { data, error } = await updateTargetReport({ programId: prePostData.programId, targetId: prePostData.reportId, fileId: fileId }, parseToFormData);
-            if (!error) {
-                mainTable.forceRender();
-                modalLabel.click();
-            }
+        const { data, error } = await validateReport({ fileId }, parseToFormData);
+        if (!error) {
+            mainTable.forceRender();
+            modalLabel.click();
         }
     } catch (error) {
         console.log(error);

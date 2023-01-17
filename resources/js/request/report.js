@@ -103,3 +103,53 @@ export async function updateTargetReport({ programId, targetId, fileId }, formDa
         };
     }
 }
+
+
+export async function validateReport({ fileId }, formData) {
+    try {
+        const { data, status } = await axios.post(`/api/programs/target/validate/${fileId}`, formData);
+
+        if (status === 200) {
+            return {
+                data: data,
+                error: false
+            };
+        } else {
+            return {
+                error: true,
+                data: null
+            };
+        }
+    } catch (error) {
+        console.log(error);
+        return {
+            error: true,
+            data: null
+        };
+    }
+}
+
+export async function unvalidateReport({ fileId }, formData) {
+    try {
+        formData.append('_method', 'DELETE');
+        const { data, status } = await axios.delete(`/api/programs/target/validate/${fileId}`, formData);
+
+        if (status === 200) {
+            return {
+                data: data,
+                error: false
+            };
+        } else {
+            return {
+                error: true,
+                data: null
+            };
+        }
+    } catch (error) {
+        console.log(error);
+        return {
+            error: true,
+            data: null
+        };
+    }
+}

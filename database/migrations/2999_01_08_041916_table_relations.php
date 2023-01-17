@@ -41,6 +41,9 @@ return new class extends Migration
         });
 
         Schema::table('program_target_files', function (Blueprint $table) {
+            $table->foreign('reported_by_user_id')->references('id')->on('users');
+            $table->foreign('validated_by_setkab_id')->references('id')->on('users');
+            $table->foreign('validated_by_satgas_id')->references('id')->on('users');
             $table->foreign('program_target_id')->references('id')->on('program_targets');
         });
 

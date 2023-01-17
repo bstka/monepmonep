@@ -12,6 +12,7 @@ use Database\Seeders\Status\Status;
 use Database\Seeders\Step\Step;
 use Database\Seeders\SubStep\SubStep;
 use Database\Seeders\UnitOfMeasurement\UnitOfMeasurement;
+use Database\Seeders\User\UserAndRoles;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,5 +32,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UnitOfMeasurement::class);
         $this->call(Program::class);
         $this->call(ProgramTarget::class);
+        $this->call(UserAndRoles::class);
     }
 }
