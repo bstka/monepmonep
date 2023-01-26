@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\ProgramTargetFileProvinces;
 use App\Models\ProgramTargetFiles;
 use App\Models\ProgramTargetProvince;
+use App\Models\User;
+use App\Notifications\ReportedTargetNotification;
+use App\Notifications\ValidationReportTargetNotification;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +19,6 @@ class ProgramTargetController extends Controller
 {
     public function insertTargetReport(Request $request, $programId, $targetId)
     {
-        // dd($request->provinces);
         $request->validate([
             "compilation_doc" => ['file', 'required'],
             "integration_doc" => ['file'],
@@ -89,8 +91,13 @@ class ProgramTargetController extends Controller
             }
         }
 
-
         if ($targetFiles && $targetProvince) {
+            $satgasAndSetkabs = User::whereRoleIs(['satgas', 'setkab'])->get();
+
+            foreach ($satgasAndSetkabs as $person) {
+                $person->notify(new ReportedTargetNotification(User::with(['instance'])->find(Auth::id()), $programId, $targetId, 'INSERT'));
+            }
+
             return response(["status" => 200, "message" => "Success!"], 200);
         } else {
             return response(["status" => 500, "message" => "Error!"], 500);
@@ -172,6 +179,12 @@ class ProgramTargetController extends Controller
         $fileUpdate = $file->update($preInsertData);
 
         if ($fileUpdate > 0) {
+            $satgasAndSetkabs = User::whereRoleIs(['satgas', 'setkab'])->get();
+
+            foreach ($satgasAndSetkabs as $person) {
+                $person->notify(new ReportedTargetNotification(User::with(['instance'])->find(Auth::id()), $programId, $targetId, 'UPDATE'));
+            }
+
             return response(["status" => 200, "message" => "Success!"], 200);
         } else {
             return response(["status" => 500, "message" => "Error!"], 500);
@@ -203,6 +216,14 @@ class ProgramTargetController extends Controller
         }
 
         if ($data !== null) {
+            $currentTargetFiles = ProgramTargetFiles::find($data);
+
+            $currentUser = User::find($currentTargetFiles->reported_by_user_id);
+
+            $currentUser->notify(
+                new ValidationReportTargetNotification(User::with(['instance'])->find(Auth::id()), $currentTargetFiles, 'VALIDATE')
+            );
+
             return response(["status" => 200, "message" => "Success!"], 200);
         } else {
             return response(["status" => 500, "message" => "Error!"], 500);
@@ -234,6 +255,12 @@ class ProgramTargetController extends Controller
         }
 
         if ($data !== null) {
+            $currentUser = User::find($data->reported_by_user_id);
+
+            $currentUser->notify(
+                new ValidationReportTargetNotification(User::with(['instance'])->find(Auth::id()), $data, 'UNVALIDATE')
+            );
+
             return response(["status" => 200, "message" => "Success!"], 200);
         } else {
             return response(["status" => 500, "message" => "Error!"], 500);

@@ -28,10 +28,10 @@
                     <a class="px-8 normal-case font-semibold text-xl text-white">E-Monev</a>
                 </div>
                 <div class="flex-none">
-                    <ul class="menu menu-horizontal px-1 text-white font-semibold hidden md:flex">
-                        <li><a>Beranda</a></li>
-                        <li><a>Kegiatan</a></li>
-                        <li><a>Renaksi</a></li>
+                    <ul class="menu menu-horizontal px-1 font-semibold hidden md:flex">
+                        <li>
+                            <label for="message-modal" class="text-white">Pesan</label>
+                        </li>
                     </ul>
                     @guest
                     <ul class="menu menu-horizontal px-1 text-white font-semibold">
@@ -105,6 +105,30 @@
                 </div>
             </div>
         </main>
+    </div>
+    <input type="checkbox" id="message-modal" class="modal-toggle" />
+    <div class="modal">
+        <div class="modal-box w-11/12 max-w-5xl">
+            <h3 class="font-bold text-lg">Pesan</h3>
+            <br>
+            <ul class="menu menu-horizontal px-1 font-semibold flex w-full">
+                @foreach(Auth::user()->notifications as $notification)
+                <li class="w-full flex flex-row items-center justify-between">
+                    <div class="w-full font-thin flex flex-row items-center justify-between">
+                        <span>
+                            {{
+                                $notification->data['message']
+                            }}
+                        </span>
+                        <button class="btn btn-error btn-xs notification-read-button" data-nfid="{{ $notification->id }}">Hapus</button>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
+            <div class="modal-action">
+                <label for="message-modal" class="btn">Tutup</label>
+            </div>
+        </div>
     </div>
     @yield('outside')
 </body>
