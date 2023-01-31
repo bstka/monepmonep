@@ -17,7 +17,7 @@ class Program extends Model
 
     public function relatedInstances()
     {
-        return $this->hasManyThrough(Instance::class, ProgramRelatedInstance::class, 'program_id', 'id');
+        return $this->hasManyThrough(Instance::class, ProgramRelatedInstance::class, 'instance_id', 'instance_id', 'instance_id', 'instance_id');
     }
 
     public function status()
@@ -43,5 +43,10 @@ class Program extends Model
     public function unit()
     {
         return $this->belongsTo(UnitOfMeasurement::class);
+    }
+
+    public function quantitatives()
+    {
+        return $this->hasMany(ProgramQuantitative::class);
     }
 }

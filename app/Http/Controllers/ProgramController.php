@@ -45,7 +45,6 @@ class ProgramController extends Controller
                 ->first();
 
             $target = $data->targets()->where('id', $targetId)->with(['files', 'files.provinces'])->first();
-            
         } else {
             $data = Auth::user()->instance->programs()
                 ->where('id', $programId)
@@ -81,9 +80,10 @@ class ProgramController extends Controller
         } else {
             $data = Auth::user()->instance->programs()->where('step_id', $stepId)->where('sub_step_id', $subStepId)
                 ->with([
-                    'targets' => function ($query) use ($year) {
-                        return $query->whereIn('year', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, $year]);
-                    }, 'targets.files',
+                    'quantitatives' => function ($query) use ($year) {
+                        return $query->whereIn('year', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, $year])->with(['targets', 'targets.files']);
+                    },
+                    // 'quantitatives.targets', 'quantitatives.targets.files',
                     'targets.provinces', 'targets.status',
                     'relatedInstances', 'status'
                 ])->get();

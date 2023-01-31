@@ -27,12 +27,13 @@ return new class extends Migration
             // $table->string("value");
             // $table->boolean("all_province");
             // ! -----------------------------------
-            
-            $table->smallInteger("year", false, true);
+
+            // $table->smallInteger("year", false, true);
             $table->smallInteger("month", false, true);
             $table->smallInteger("day", false, true);
             $table->bigInteger("status_id", false, true);
             $table->bigInteger("instance_id", false, true)->nullable();
+            $table->bigInteger("program_quantitative_id", false, true);
             $table->bigInteger("program_id", false, true);
             $table->timestamps();
         });

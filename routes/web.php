@@ -28,6 +28,10 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 
 // ! API ROUTES !
 
+Route::middleware(['auth'])->prefix('notification')->group(function () {
+    // Route::post('/read');
+});
+
 Route::middleware(['auth'])->prefix('api')->group(function () {
 
     // ! Programs

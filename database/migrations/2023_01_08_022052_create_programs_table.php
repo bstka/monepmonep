@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text("output");
             $table->string("code");
             $table->text("value");
-            $table->integer("quantitive")->default(1);
             $table->bigInteger("unit_id", false, true);
             $table->bigInteger("status_id", false, true);
             $table->bigInteger("instance_id", false, true);

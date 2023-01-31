@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\City\City;
 use Database\Seeders\Instance\Instance;
 use Database\Seeders\Program\Program;
+use Database\Seeders\ProgramQuantitative\Quantitative;
+use Database\Seeders\ProgramRelatedInstance\RelatedInstance;
 use Database\Seeders\ProgramTarget\ProgramTarget;
 use Database\Seeders\Province\Province;
 use Database\Seeders\Status\Status;
@@ -31,7 +33,9 @@ class DatabaseSeeder extends Seeder
         $this->call(Status::class);
         $this->call(UnitOfMeasurement::class);
         $this->call(Program::class);
-        $this->call(ProgramTarget::class);
+        $this->call(Quantitative::class);
+        // $this->call(ProgramTarget::class);
+        // $this->call(RelatedInstance::class);
         $this->call(UserAndRoles::class);
     }
 }

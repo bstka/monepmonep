@@ -25,8 +25,8 @@ class ProgramTarget extends Model
         return $this->hasManyThrough(Province::class, ProgramTargetProvince::class, 'province_id', 'id');
     }
 
-    public function program()
+    public function programQuantitative()
     {
-        return $this->belongsTo(Program::class);
+        return $this->belongsTo(ProgramQuantitative::class);
     }
 }

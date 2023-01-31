@@ -1,12 +1,12 @@
 <?php
 
-namespace Database\Seeders\UnitOfMeasurement;
+namespace Database\Seeders\ProgramRelatedInstance;
 
-use App\Models\UnitOfMeasurement as ModelsUnitOfMeasurement;
+use App\Models\ProgramRelatedInstance;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class UnitOfMeasurement extends Seeder
+class RelatedInstance extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,14 +15,15 @@ class UnitOfMeasurement extends Seeder
      */
     public function run()
     {
-        $files = fopen(base_path('database/seeders/UnitOfMeasurement/units.csv'), "r");
+        $files = fopen(base_path('database/seeders/ProgramRelatedInstance/related_instance.csv'), "r");
 
-        $firstLine = false;
+        $firstLine = true;
 
         while (($data = fgetcsv($files, 520, ",")) !== false) {
             if (!$firstLine) {
-                ModelsUnitOfMeasurement::create([
-                    "name" => $data['0']
+                ProgramRelatedInstance::create([
+                    "instance_id" => $data['0'],
+                    "program_id" => $data['1'],
                 ]);
             }
             $firstLine = false;

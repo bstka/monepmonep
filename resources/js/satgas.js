@@ -467,3 +467,8 @@ provinceSelectorRadio.forEach((element) => {
         });
     }
 });
+
+const notifDeleteButtons = document.querySelectorAll('button.notification-read-button');
+notifDeleteButtons.forEach(v => {
+    console.log(v);
+});

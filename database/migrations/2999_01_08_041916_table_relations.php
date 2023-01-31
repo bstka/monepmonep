@@ -33,6 +33,7 @@ return new class extends Migration
             $table->foreign('status_id')->references('id')->on('statuses');
             $table->foreign('instance_id')->references('id')->on('instances');
             $table->foreign('program_id')->references('id')->on('programs');
+            $table->foreign('program_quantitative_id')->references('id')->on('program_quantitatives');
         });
 
         Schema::table('program_related_instances', function (Blueprint $table) {
@@ -55,6 +56,11 @@ return new class extends Migration
         Schema::table('program_target_file_provinces', function (Blueprint $table) {
             $table->foreign('target_file_id')->references('id')->on('program_target_files');
             $table->foreign('province_id')->references('id')->on('provinces');
+        });
+
+        Schema::table('program_quantitatives', function (Blueprint $table) {
+            $table->foreign('program_id')->references('id')->on('programs');
+            $table->foreign('unit_id')->references('id')->on('unit_of_measurements');
         });
 
         Schema::table('sub_steps', function (Blueprint $table) {

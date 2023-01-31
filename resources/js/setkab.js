@@ -470,3 +470,12 @@ provinceSelectorRadio.forEach((element) => {
         });
     }
 });
+
+
+// ! Notifications Delete Button
+const notifDeleteButtons = document.querySelectorAll('button.notification-read-button');
+notifDeleteButtons.forEach(element => {
+    element.addEventListener('click', events => {
+        console.log(element);
+    });
+});

@@ -73,6 +73,9 @@
                     <label for="my-drawer-2" class="drawer-overlay"></label>
                     <ul class="menu p-4 w-80 bg-primary text-white font-semibold flex flex-col gap-2">
                         <!-- Sidebar content here -->
+                        <li>
+                            <button class="w-full text-left font-semibold">Analisis</button>
+                        </li>
                         @php
                         $steps = \App\Models\Step::all();
                         @endphp

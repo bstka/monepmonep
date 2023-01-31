@@ -22,10 +22,6 @@ return new class extends Migration
             $table->integer("integration_target_count", false, true)->nullable();
             $table->integer("syncronization_target_count", false, true)->nullable();
             $table->integer("publication_target_count", false, true)->nullable();
-            $table->integer("compilation_value", false, true)->nullable();
-            $table->integer("integration_value", false, true)->nullable();
-            $table->integer("syncronization_value", false, true)->nullable();
-            $table->integer("publication_value", false, true)->nullable();
             $table->bigInteger("reported_by_user_id", false, true);
             $table->bigInteger("validated_by_setkab_id", false, true)->nullable();
             $table->bigInteger("validated_by_satgas_id", false, true)->nullable();
